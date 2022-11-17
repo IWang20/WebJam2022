@@ -7,7 +7,8 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('', views.musicgenerator, name='musicgenerator'),
+    path('', views.homepage, name='homepage'),
+    # path('', views.musicgenerator, name='musicgenerator'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

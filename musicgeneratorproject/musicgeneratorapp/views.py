@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import Paginator
 from .models import Song
+from django.template import loader
 
 # Create your views here.
 
@@ -16,3 +17,7 @@ def musicgenerator(request):
     
     #return render(request, 'path from template to the file', {'Song': Song})
     return HttpResponse("Hello world!")
+
+def homepage(request):
+    template = loader.get_template('homepage.html')
+    return HttpResponse(template.render())
